@@ -17,6 +17,8 @@ const applicationsRoute = require('./routes/User/applicationsRoute');
 const savedJobsRoute = require('./routes/User/savedJobsRoute');
 const profileRoute = require('./routes/User/profileRoute');
 const supportfileRoute = require('./routes/User/supportfileRoute');
+const partnerProfileRoute = require('./routes/Partner/partnerProfileRoute');
+const InternshipRoute = require('./routes/Partner/InternshipRoute');
 
 // Middleware
 app.use(express.json()); // Parse JSON bodies
@@ -42,6 +44,8 @@ app.use('/api/applications', applicationsRoute);
 app.use('/api/savedJobs', savedJobsRoute);
 app.use('/api/profiles', profileRoute);
 app.use('/api/supportfiles', supportfileRoute);
+app.use('/api/partnerProfiles', partnerProfileRoute);
+app.use('/api/Internships', InternshipRoute);
 
 
 // Connect to MongoDB
